@@ -56,15 +56,6 @@ pffft = include/pffft.h
 fuzzysearchdatabase = include/FuzzySearchDatabase.hpp
 ghcfilesystem = include/ghc/filesystem.hpp
 
-DEPS += $(glew)
-DEPS += $(glfw)
-DEPS += $(jansson)
-DEPS += $(libcurl)
-DEPS += $(libarchive)
-DEPS += $(libspeexdsp)
-DEPS += $(libsamplerate)
-DEPS += $(rtmidi)
-DEPS += $(rtaudio)
 DEPS += $(nanovg)
 DEPS += $(nanosvg)
 DEPS += $(oui-blendish)
@@ -262,7 +253,7 @@ $(ghcfilesystem): filesystem/include/ghc
 
 # Helpers
 
-src: glew-2.1.0 glfw jansson-2.12 speexdsp-SpeexDSP-1.2rc3 openssl-1.1.1k curl-7.79.1 zstd-1.4.5 libarchive-3.4.3 rtmidi-4.0.0 rtaudio nanovg nanosvg oui-blendish osdialog
+src: nanovg nanosvg oui-blendish osdialog
 
 clean:
 	git clean -fdx
